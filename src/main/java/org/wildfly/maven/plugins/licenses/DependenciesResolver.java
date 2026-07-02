@@ -3,6 +3,7 @@ package org.wildfly.maven.plugins.licenses;
 import com.google.common.base.Strings;
 import org.apache.maven.artifact.Artifact;
 import org.apache.maven.artifact.repository.ArtifactRepository;
+import org.apache.maven.model.building.ModelBuildingRequest;
 import org.apache.maven.project.DefaultProjectBuildingRequest;
 import org.apache.maven.project.MavenProject;
 import org.apache.maven.project.ProjectBuilder;
@@ -137,6 +138,8 @@ public class DependenciesResolver extends AbstractLogEnabled {
       projectBuildingRequest.setRemoteRepositories(remoteRepositories);
       projectBuildingRequest.setSystemProperties(System.getProperties());
       projectBuildingRequest.setRepositorySession(repositorySession);
+      projectBuildingRequest.setProcessPlugins(false);
+      projectBuildingRequest.setValidationLevel(ModelBuildingRequest.VALIDATION_LEVEL_MINIMAL);
       depMavenProject = mavenProjectBuilder.build(artifact, true, projectBuildingRequest).getProject();
       depMavenProject.getArtifact().setScope(artifact.getScope());
     } catch (ProjectBuildingException e) {

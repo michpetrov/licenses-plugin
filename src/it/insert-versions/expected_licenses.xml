@@ -19,6 +19,7 @@
         <license>
           <name>Apache License 2.0</name>
           <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+          <distribution>repo</distribution>
         </license>
       </licenses>
     </dependency>
@@ -30,6 +31,18 @@
         <license>
           <name>XYZ</name>
           <url>https://example.com/xyz-license.txt</url>
+        </license>
+      </licenses>
+    </dependency>
+    <dependency>
+      <groupId>xml-resolver</groupId>
+      <artifactId>xml-resolver</artifactId>
+      <version>1.2</version>
+      <licenses>
+        <license>
+          <name>Apache License 2.0</name>
+          <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+          <distribution>repo</distribution>
         </license>
       </licenses>
     </dependency>
